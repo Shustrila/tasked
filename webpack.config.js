@@ -4,7 +4,7 @@ module.exports = {
   entry: {
     app: './src/app.js',
   },
-  watch: process.env.NODE_ENV !== 'development',
+  watch: process.env.NODE_ENV === 'development',
   mode: (process.env.NODE_ENV === 'production') ? 'production' : 'development',
   output: {
     path: path.resolve(__dirname, 'dist'),

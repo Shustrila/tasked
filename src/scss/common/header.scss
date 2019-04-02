@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 15px;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 15px #dddddd;
+  margin-bottom: 20px;
+
+  &__logo {
+    @include grid(3)
+  }
+  &__search {
+    @include grid(6)
+  }
+  &__user {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    @include grid(3);
+
+    &-button {
+      display: inline-block;
+      padding: 10px 20px;
+      border: 1px solid #dddddd;
+      border-radius: 5px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    &-singin {
+      border-color: darkgreen;
+      color: darkgreen;
+    }
+    &-registration {
+      border-color: deepskyblue;
+      color: deepskyblue;
+    }
+  }
+}

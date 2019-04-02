@@ -1,0 +1,23 @@
+.tasks {
+  flex-grow: 1;
+
+  &__heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+
+    &-title {
+      padding-right: 10px;
+      border-right: 2px solid #dddddd;
+    }
+    &-date {
+      padding-left: 10px;
+      flex-grow: 1;
+    }
+    &-perform {
+      text-align: right;
+    }
+  }
+}

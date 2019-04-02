@@ -1,0 +1,30 @@
+<%- include('./layouts/header') %>
+
+<main class="page">
+    <%- include('./layouts/sitebar') %>
+    <div class="tasks">
+        <div class="tasks__heading">
+            <h2 class="tasks__heading-title">
+                Today
+            </h2>
+            <p class="tasks__heading-date">
+                date
+            </p>
+            <p class="tasks__heading-perform">
+                perform
+            </p>
+        </div>
+        <ul>
+            <% for (const tascked of tasckeds){ %>
+                <li>
+                    <div><%= tascked.title[0].toUpperCase() %></div>
+
+                    <h3><%= tascked.title %></h3>
+                    <p><%= tascked.text %></p>
+                </li>
+            <% } %>
+        </ul>
+    </div>
+</main>
+
+<%- include('./layouts/footer') %>

@@ -1,0 +1,11 @@
+.sitebar {
+  padding: 0 35px;
+
+  &__category {
+    list-style: none;
+
+    &-item {
+      min-width: 150px;
+    }
+  }
+}

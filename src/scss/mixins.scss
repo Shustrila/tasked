@@ -1,5 +1,6 @@
+
+
 @mixin grid($col){
   max-width: ($col * 100%) / 12;
   width: ($col * 100%) / 12;
-  flex-basis: ($col * 100%) / 12;
 }

@@ -2,23 +2,30 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8">
-        <title>Document</title>
+        <title>TASKED</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
     </head>
     <body>
         <header class="header">
-            <a class="header__logo" href="/">
-                Today tasked
-            </a>
-            <form class="header__search" action="/search">
-                <input type="text">
-                <input type="submit">
-            </form>
+            <a class="header__logo" href="/"> -tasked- </a>
+            <% if (file !== 'index') { %>
+                <form class="header__search" action="/search">
+                    <label class="header__search-label">
+                        <input class="header__search-input" type="text">
+                        <button class="header__search-button header__search-icon">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </label>
+                </form>
+            <% } %>
             <div class="header__user">
                 <a class="header__user-singin header__user-button" href="/singin">
                     sing in
                 </a>
-                <a class="header__user-registration header__user-button" href="/singup">
-                    registration
+                <a class="header__user-singup header__user-button" href="/singup">
+                    sing up
                 </a>
             </div>
         </header>

@@ -1,6 +1,4 @@
 class TaskedController {
-  constructor(){}
-
   index( req, res) {
     res.render('index.ejs', {
       tasckeds: [

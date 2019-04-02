@@ -1,36 +1,84 @@
 .header {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   padding: 10px 15px;
   background-color: #ffffff;
   box-shadow: 1px 1px 15px #dddddd;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
 
   &__logo {
-    @include grid(3)
+    display: block;
+    @include grid(4);
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000000;
+    font-size: 22px;
   }
   &__search {
-    @include grid(6)
+    @include grid(4);
+    padding: 0 15px;
+
+    &-label {
+      display: block;
+      position: relative;
+    }
+    &-input {
+      width: 100%;
+      padding: 10px 0 10px 40px;
+      font-size: 20px;
+      border: 0;
+      border-radius: 7px;
+      background-color: #eaf5fa;
+      outline: none;
+    }
+    &-button {
+      position: absolute;
+      top: 50%;
+      left: 5px;
+      transform: translateY(-50%);
+    }
+    &-icon {
+      font-size: 24px;
+      background-color: transparent;
+      border: 0;
+      cursor: pointer;
+      color: #8d8d8d;
+
+      &:hover {
+        color: #000000;
+      }
+    }
   }
   &__user {
     display: flex;
     flex-wrap: wrap;
-    justify-content: right;
-    @include grid(3);
+    justify-content: flex-end;
+    @include grid(4);
 
     &-button {
       display: inline-block;
+      margin-right: 10px;
       padding: 10px 20px;
+      font-size: 14px;
       border: 1px solid #dddddd;
       border-radius: 5px;
       text-decoration: none;
       text-transform: uppercase;
+      font-weight: lighter;
+
+      &:last-child{
+        margin-right: 0;
+      }
     }
+
     &-singin {
       border-color: darkgreen;
       color: darkgreen;
     }
-    &-registration {
+    &-singup {
       border-color: deepskyblue;
       color: deepskyblue;
     }

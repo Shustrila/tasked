@@ -6,6 +6,42 @@
 
     &-item {
       min-width: 150px;
+      margin-bottom: 15px;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
     }
+
+    &-link {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      text-decoration: none;
+      transition: 0.25s;
+      color: #8d8d8d;
+
+      &:hover {
+        color: #333333;
+      }
+    }
+
+    &-icon{
+      font-size: 24px;
+      margin-right: 10px;
+    }
+  }
+
+  &__add {
+    display: block;
+    color: #ffffff;
+    background-color: darkcyan;
+    margin-top: 20px;
+    border-radius: 30px;
+    padding: 10px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    text-decoration: none;
   }
 }

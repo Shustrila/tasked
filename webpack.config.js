@@ -3,6 +3,7 @@ const path = require('path');
 module.exports = {
   entry: {
     app: './src/app.js',
+    main: './src/main.js',
   },
   watch: process.env.NODE_ENV === 'development',
   mode: (process.env.NODE_ENV === 'production') ? 'production' : 'development',

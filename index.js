@@ -8,6 +8,7 @@ const app = express();
 env(`${__dirname}/.env`);
 
 // static
+app.use('/images', express.static(`${__dirname}/src/images`));
 app.use('/', express.static(`${__dirname}/dist`));
 
 // routes
@@ -15,7 +16,6 @@ app.use(require('./routes/index'));
 app.use(require('./routes/users'));
 
 // errors
-
 app.listen(process.env.PORT, () => {
   if (process.env.NODE_ENV === 'development') {
     console.log(`http://localhost:${process.env.PORT}`);
